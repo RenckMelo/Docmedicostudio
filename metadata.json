@@ -1,0 +1,6 @@
+{
+  "name": "Gerador de Documentos Médicos",
+  "description": "Plataforma profissional para emissão e edição de documentos médicos oficiais no padrão brasileiro: LME, Receitas, Atestados, Encaminhamento e APAC com exportação em PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

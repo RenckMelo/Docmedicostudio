@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Hide scrollbars for clean tab scroll */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Print Page setup for exact A4 rendering */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Force printable container to full width and removes shadow */
+  #printable-document {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    transform: scale(1) !important;
+  }
+
+  input, textarea, select {
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure bottom lines and dashed borders remain visible for fillable lines on paper */
+  input.border-b, input.border-b-2, input.border-dashed, textarea.border-b, textarea.border-b-2, textarea.border-dashed {
+    border-bottom-color: #334155 !important;
+  }
+}
+
